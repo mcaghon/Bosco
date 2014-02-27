@@ -1,0 +1,632 @@
+/*
+// MOBILE
+*/
+
+
+/* Header
+------------------------------ */
+header {
+		background-color: transparent;
+}
+
+
+/* logo */
+header .logo {
+	width:40px;
+	height:45px;
+	background-position:-83px -94px;
+	top:73px;
+	left:18px;
+}
+.ic-inc5000 {
+	right: 18px;
+	top: 73px;
+	width: 45px;
+	height: 45px;
+	background-size: 45px 45px;
+}
+/* (Retina iPhone) */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	header .logo {
+	    background-image: url(http://intuitivecompany.com/images/ic/icon-sprite@2x.png);
+		background-position:-83px -94px;
+	    background-size: 124px auto;
+	}
+}
+
+/* sides */
+header .sides {
+}
+header .sides LI {
+	height:40px;
+}
+header .sides LI A {
+	-webkit-border-radius:0 !important;
+	border-radius:0 !important;
+	padding:5px 0 8px;
+	font-size:16px;
+}
+
+/* header-txt */
+.header-txt {
+    padding:6px 20px 20px 65px;
+}
+.header-title {
+    font-size:50px;
+    line-height:0.8;
+    letter-spacing:-2px;
+    margin:14px 0 5px -2px;
+}
+.header-subtitle {
+    font-size:13px;
+    line-height:16px;
+}
+
+
+
+
+/* FOOTER
+---------------------*/
+footer {
+	max-height:none;
+	background-color: #fff !important;
+	margin-top: -10px;
+	padding-top: 10px;
+	width:auto !important;
+}
+.footer-i {
+	padding:0 18px 20px;
+	margin:0 auto;
+	width:284px !important;
+	height:auto;
+}
+footer .soc {
+	float:none;
+	margin:0;
+	padding:0;
+}
+footer .soc LI {
+	float:none;
+	padding:5px 10px;
+	margin:0;
+	border-bottom:1px solid #e8e8e8;
+}
+footer .soc LI A {
+	position:relative;
+}
+
+/*gray icons*/
+.soc .soc-twitter A {
+	background-position:0 -305px;
+	width:24px;
+	}
+.soc .soc-facebook A {
+	background-position:-35px -305px;
+	margin:0 2px 0 0;
+	}
+.soc .soc-email A {
+	background-position:-64px -305px;
+	}
+
+footer .soc LI A .replace {
+	position:absolute;
+	left:30px;
+	display:block;
+	white-space:nowrap;
+	letter-spacing:-.05em;
+	color:#333;
+}
+
+footer .contacts {
+	float:none;
+	margin:0;
+	padding:0;
+}
+footer .contacts LI {
+	float:none;
+	padding:5px 10px;
+	margin:0;
+	border-bottom:1px solid #e8e8e8;
+	color:#333;
+}
+footer .contacts LI A,
+footer .contacts LI A:link,
+footer .contacts LI A:visited {
+	color:#333;
+}
+footer .contacts-phone I {
+	margin-right:10px;
+}
+footer .contacts-addr I {
+	margin-right:12px;
+	margin-left:3px;
+}
+footer .employment,
+footer .employment A,
+footer .employment A:link,
+footer .employment A:visited {
+	background:none;
+	padding:0;
+	margin:0;	
+	float:none;
+	}
+footer .employment {
+	padding:0 10px 5px 25px;
+	margin-left: 15px;
+	margin-top: 5px;
+	background: url(http://intuitivecompany.com//images/ic/icon-sprite.png) no-repeat -90px -305px !important;
+	text-transform: none;
+	}
+footer .employment A,
+footer .employment A:link,
+footer .employment A:visited {
+	color:#333;
+	width:auto;
+	position:static;
+	text-align:left;
+	}
+
+
+
+
+/* Hangline 
+-------------------------- */
+#content {
+}
+#hangline {
+    padding:0 18px;
+    margin:0 auto;
+    width:284px !important;
+}
+
+#content #hangline article {
+    position:relative;
+    display:block;
+    float:none;
+    width:284px;
+    height:184px;
+    margin:0 0 20px;
+    text-align:left;
+    line-height:1.2;
+    background:none;
+    overflow:visible !important;
+}
+#content #hangline article:nth-child(even) {
+	margin-right: 0;
+	float: none;
+}
+
+#content #hangline article:before {
+	content:"";
+	position:absolute;
+	left:-18px;
+	right:-18px;
+	height:0;
+	border-top:1px solid #e8e8e8;
+	bottom:-10px;
+}
+
+
+#hangline article.preview > a {
+	display:block;
+	height:184px;
+	position:relative;
+	overflow:hidden;zoom:1;
+	
+}
+/*#hangline article.preview a * {display:none}*/
+/*#hangline article.preview .preview-meta { border: 1px solid #999;}*/
+#hangline article.preview a img {
+	width:100%;
+	height:auto !important;
+}
+
+#hangline article.preview > a:before {
+}
+
+#hangline article.preview a.status {
+    padding-right:0;
+    background:none;
+}
+#hangline article.preview a.status .status-i {
+    line-height:1.2;
+    width:auto;
+    height:130px;
+    padding-top:20px;
+    line-height:40px;
+}
+
+
+
+
+
+/* Article page
+-------------------- */
+body .openedArticleBox {
+}
+
+/* header */
+.body-article header {
+}
+.body-article .header-i {
+}
+.body-article header .logo {
+	left:18px;
+	top:73px;
+	width:40px;
+	height:46px;
+	background-position:-83px -94px;
+}
+
+/* (Retina iPhone) */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.body-article header .logo {
+	    background-image: url(http://intuitivecompany.com/images/ic/icon-sprite@2x.png);
+		background-position:-83px -94px;
+	    background-size: 124px auto;
+	}
+}
+
+.body-article header .logo A {
+	height:46px;
+	}
+	
+/* footer */
+.body-article footer {
+}
+
+/* article */
+.body-article .openedArticleBox,
+.body-article article.detail_ajax,
+.body-article article.detail {
+    width:100%;
+    max-width:100%;
+    overflow:hidden;
+    padding:0 !important;
+    margin:0 !important;
+}
+
+.body-article .openedArticleBox {
+	min-height:0 !important;
+}
+
+
+.body-article #article_content article.detail {
+    padding:0 !important;
+    -webkit-box-shadow:none;box-shadow:none;
+}
+.body-article article.detail_ajax h1,
+.body-article article.detail h1 {
+    font-size:22px;
+    line-height:30px;
+    font-weight:normal;
+    margin:20px 20px 20px 65px;
+    min-height:57px !important;
+}
+
+.body-article article.detail_ajax .date,
+.body-article article.detail .date {
+}
+
+.body-article .wrap-img {
+    width:auto;
+    max-width:100%;
+    overflow:hidden;
+}
+.body-article .wrap-img IMG {
+    max-width:100%;
+    height:auto;
+}
+
+
+.body-article #article_content {
+    font-size:14px;
+}
+.body-article #article_content h3,
+.body-article #article_content blockquote,
+.body-article #article_content p {
+    margin:10px 20px 10px;
+    font-size:14px;
+}
+
+.body-article #article_content blockquote p {
+	margin-top: 0;
+}
+.body-article #article_content h3 { margin-top: -5px; }
+
+.body-article #article_content cite {
+    margin:0 20px;
+    font-size:14px;
+}
+
+
+
+.body-article-dark {
+}
+.body-article-dark header .logo {
+    background-position:-83px -185px;
+}
+
+.body-article-dark #article_content .gallery {
+	padding:0 16px !important;
+	}
+
+.body-article-dark footer a,
+.body-article-dark footer .soc LI A .replace,
+.body-article-dark footer .contacts LI,
+.body-article-dark footer .employment A,
+.body-article-dark footer .employment A:link,
+.body-article-dark footer .employment A:visited {
+	color:#333 !important;
+	}
+	
+	
+
+.body-article-blue {
+}
+.body-article-blue header .logo {
+    background-position:-83px -185px;
+}
+
+/*IC Bio feature LI*/
+ul.ic-bio-list {
+    margin: 0 40px 20px;
+}
+
+/* (Retina iPhone) */
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.body-article-blue header .logo {
+     	    background-position:-83px -185px;
+	}
+}
+.body-article-blue .openedArticleBox #article_content article {
+	padding:0 0 140px !important;
+}
+
+.body-article article.detail_ajax.snipit .wrap-img,
+.body-article article.detail.snipit .wrap-img {
+    margin:0 !important;
+}
+.body-article.body-article-snipit article.detail_ajax h1,
+.body-article.body-article-snipit article.detail h1 {
+	margin-top:10px !important;
+}
+.body-article-status article.detail_ajax h1,
+.body-article-status article.detail h1 {
+}
+
+.body-article-status #article_content article.detail_ajax.status h1,
+.body-article-status #article_content article.detail.status h1 {
+    font-size:30px !important;
+    line-height:30px !important;
+    margin-top:80px !important;
+    
+	-webkit-border-radius:12px 12px 12px 0;border-radius:12px 12px 12px 0;
+    margin:76px 16px 0 !important;
+    padding:12px 15px !important;
+    font-size:26px !important;
+    line-height:32px !important;
+	}
+
+.body-article-blue footer a,
+.body-article-blue footer .soc LI A .replace,
+.body-article-blue footer .contacts LI,
+.body-article-blue footer .employment A,
+.body-article-blue footer .employment A:link,
+.body-article-blue footer .employment A:visited {
+	color:#333 !important;
+	}
+
+
+
+
+
+
+/* IC Home
+----------------------- */
+BODY {
+}
+
+.page .slides {
+}
+.page .slides-nav {
+}
+.page .slides-nav-wrap {
+	padding: 0;
+	 	max-width:654px;
+}
+.page .slides-nav-i {
+    padding:0 18px;
+    margin:0 auto;
+    width:284px !important;
+}
+.page .slides-nav-i > LI {
+    position:relative;
+    display:block;
+    float:none;
+    width:284px !important;
+    height:184px;
+    margin:0 0 20px;
+    
+    text-align:left;
+    line-height:1.2;
+    background:none;
+    overflow:visible !important;
+}
+.page .slides-nav-i > LI:nth-child(even) {
+	float: none;
+}
+.page .slides-nav-i > LI:before {
+	content:"";
+	position:absolute;
+	left:-18px;
+	right:-18px;
+	height:0;
+	border-top:1px solid #e8e8e8;
+	bottom:-10px;
+}
+
+.page .slides-nav-i > LI H3 {
+	width:260px !important;
+}
+.page .slides-nav-i > LI DIV {
+	display:block;
+	width:auto !important;
+	height:184px;
+	overflow:hidden;zoom:1;
+}
+.page .slides-nav-i > LI DIV IMG {
+}
+.page .slides-nav-i > LI I {
+    display:none;
+}
+
+
+
+
+BODY.body-slide header {
+}
+BODY.body-slide .header-i {
+    width:auto;
+    margin:0;
+    position:relative;
+}
+BODY.body-slide header .logo {
+    z-index:1000;
+    width:40px;
+    height:46px;
+    background-position:-83px -94px;
+}
+BODY.body-slide header .logo A {
+    height:46px;
+}
+
+
+
+.body-slide .slides-close {
+    top:12px;
+}
+
+.body-slide .slides-i {
+    position:static;
+    background:none;
+    overflow:visible;
+    padding:0;
+}
+.body-slide .slide {
+}
+.body-slide .slide-h {
+    padding:18px 60px 30px 65px;
+    min-height:64px;
+}
+.body-slide .slide-h H2 {
+    font-size:32px;
+    line-height:32px;
+	margin-top: 7px;
+}
+
+.ugc ul > li {
+    margin-left:.65em;
+}
+
+.slide-next a {
+    min-width:160px;
+    white-space:nowrap;
+    font-size:20px;
+}
+
+/* ---- IC BIO FEATURE ---- */
+
+h4 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    margin: 0 0 0 20px;
+    color: #333;
+}
+hr {
+    margin: 20px;
+}
+.ic-bio-caption-right {
+    margin: 30px 20px; 
+}
+.ic-bio-caption-right iframe {
+    height: auto;
+}
+.ic-link-to-bio a {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.ic-bio-img-right em,
+.ic-bio-img-left em,
+.ic-bio-caption-right em,
+.ic-bio-caption-left em {
+    margin-top: 20px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}
+.ic-bio-caption-right em {
+    padding-right: 20px;
+}
+.ic-bio-caption-left em {
+    padding-left: 20px; 
+}
+
+/* ---- END IC BIO FEATURE ----*/
+
+.team {
+}
+.team-descr {
+    padding-bottom:140px;
+}
+.team-pic {
+    position:absolute;
+}
+.team-contact {
+    margin:20px 0 0 20px;
+}
+.team LI {
+    padding:16px 8px 10px 150px;
+    height:auto;
+    min-height:50px;
+letter-spacing: -.06em
+}
+.team LI H2 {
+    font-size:18px;
+}
+
+.team-open LI.cur {
+    padding: 35px 30px 70px;
+}
+
+.team-open LI.cur H2, .team-open LI.cur H3 {
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.team-open LI.cur H3 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.team-contact {
+    margin: 20px 0 0 10px;
+}
+
+.sections-i P {
+    font-size:18px !important;
+    line-height:26px !important;
+}
+
+.sections li h3 {
+	font-size: 24px;
+	line-height: 24px;
+}
+
+article.snipit h1 span { display: none }
+header { background-color: transparent}
+.slide-visual, .slide-visual *, .detail_ajax.video iframe, .ajax.video iframe { max-width: 100% !important }
+#video iframe, .detail_ajax.video iframe, .detail.video iframe { height: 200px !important }
