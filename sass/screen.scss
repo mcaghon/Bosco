@@ -6,6 +6,7 @@
 @import "compass/reset";
 @import "compass/css3";
 @import "compass/css3/opacity";
+@import "compass/css3/transition";
 
 // VARIABLES
 
@@ -177,11 +178,9 @@ main {
 					z-index: 3;
 					display: block;
 					@include opacity(0);
-					// need mixin
-					  -webkit-transition: all 0.2s ease-in-out; 
-					  -moz-transition: all 0.2s ease-in-out;
-					  -o-transition: all 0.2s ease-in-out;
-					  transition: all 0.2s ease-in-out;
+					@include transition-duration(.25s);
+					@include transition-timing-function(ease-in-out);
+					  
 				}
 				
 				p.date {
@@ -192,12 +191,20 @@ main {
 					@include FancyScript(13px);
 					position: absolute;
 					top: -20px;
+					@include opacity(1);
+					@include transition-duration(.25s);
+					@include transition-timing-function(ease-in-out);
 				}
 			}
 			
 			li:focus h3, li:hover h3 {
 					@include opacity(1);
 					top: -20px;
+			}
+			
+			li:focus p.date, li:hover p.date {
+					@include opacity(0);
+					top: 0px;
 			}
 			
 		}
