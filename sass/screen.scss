@@ -6,6 +6,29 @@
 @import "compass/reset";
 @import "compass/css3";
 
+// VARIABLES
+
+$is-hidpi: "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx)";
+
+$ICblue: #93b5e5;
+$ICmagenta: #ba0163;
+$ICgreen: #8fc347;
+
+// MIXINS
+
+@mixin FancyScript($size) {
+	font-size:$size;
+	font-family:Georgia, serif;
+	font-style:italic;
+	font-weight:100;
+}
+
+@mixin HelveticaNeueLight {
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+	font-weight:300;
+	font-stretch:normal;
+}
+
 @mixin HelveticaNeueRegular {
 	font-family:"HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
 	font-weight:400;
@@ -24,45 +47,212 @@
 	font-stretch:normal;
 }
 
+@mixin rounded($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin background-size($width, $height) {
+  -webkit-background-size: $width $height;
+     -moz-background-size: $width $height;
+          background-size: $width $height;
+}
+
 @mixin retinize($file, $type, $width, $height) {
   background-image: url('../img/' + $file + '.' + $type);
  
-  @media (-webkit-min-device-pixel-ratio: 1.5),
-         (min--moz-device-pixel-ratio: 1.5),
-         (-o-min-device-pixel-ratio: 3/2),
-         (min-device-pixel-ratio: 1.5),
-         (min-resolution: 1.5dppx) {
+  @media #{$is-hidpi} {
     & {
       background-image: url('../img/' + $file + '@2x.' + $type);
-      -webkit-background-size: $width $height;
-         -moz-background-size: $width $height;
-              background-size: $width $height;
+	  @include background-size($width, $height);
     }
   }
 }
+
+// MAIN
 
 body {
 	@include HelveticaNeueRegular;
 	@include background-image(linear-gradient(left, #f4f4f4, #dddddd));	
 }
 
-#logo {
-	position:absolute;
-	left:0;
-	top:80px;
-	width:82px;
-	height:95px;
-//	background:url(../img/sprite.png) no-repeat 0 0;
-	@include retinize('sprite', 'png', 82px, 95px);
-}
-
-h1 {
-	@include HelveticaNeueHeavy;
-	font-size: 96px;
-	letter-spacing: -5px;
+header {
+	width: 820px;
+	margin: 0 auto;
+	position: relative;
+	padding: 40px 70px;
+	background-color: #f4f4f4;
+	
+	#logo {
+		position:absolute;
+		left:0;
+		top:40px;
+		width:80px;
+		height:92px;
+		@include retinize('sprite', 'png', 500px, 500px);
+	}
+	
+	nav {
+		
+		dl {
+			background-color: #3f2;
+			
+			dt {
+				background-color: #333;
+				width: 80px;
+				height: 80px;
+				position: absolute;
+				top: 40px;
+				right: 0;
+				text-indent: -10000001px;
+				@include rounded(40px);
+			}
+			
+			dd {
+				display: none;
+				@include HelveticaNeueHeavy;
+				font-size: 80px;
+				letter-spacing: -5px;
+			}
+		}
+	}
+	
+	h1 {
+		@include HelveticaNeueHeavy;
+		font-size: 80px;
+		letter-spacing: -5px;
+		margin-left: 40px;
+	}
+	
+	h2 {
+		margin: 10px 0 0 40px;
+		@include FancyScript(15px);
+	}
 }
 
 a {
 	@include HelveticaNeueHeavy;
 	text-decoration: none;
+	color: $ICmagenta;
+}
+
+main {
+	padding: 20px 0 0;
+	background-color: #d6d6d6;
+	overflow: hidden;
+	
+	section#hangline {
+		
+		ul {
+			
+			li {
+				position: relative;
+				float: left;
+				width: 300px;
+				height: 300px;
+				background-color: #666;
+				
+				&.feature {
+					background-color: $ICgreen;
+				}
+				
+				&.status {
+					background-color: $ICblue;
+					a {
+						color: #fff;
+						@include FancyScript(40px);
+					}
+				}
+				
+				h3 {
+					color: #fff;
+					background: #252525;
+					display: block;
+					padding: 10px;
+					@include FancyScript(18px);
+					position: absolute;
+					top: 0;
+					z-index: 3;
+					display: block;
+					// need mixin
+					opacity: 0;
+					-moz-opacity: 0;
+					filter: alpha(opacity = 0);
+					// need mixin
+					  -webkit-transition: all 0.2s ease-in-out; 
+					  -moz-transition: all 0.2s ease-in-out;
+					  -o-transition: all 0.2s ease-in-out;
+					  transition: all 0.2s ease-in-out;
+				}
+				
+				p.date {
+					color: #fff;
+					background: #252525;
+					display: block;
+					padding: 3px 10px 4px;
+					@include FancyScript(13px);
+					position: absolute;
+					top: -20px;
+				}
+			}
+			
+			li:focus h3, li:hover h3 {
+					// need mixin
+					opacity: 100;
+					-moz-opacity: 100;
+					filter: alpha(opacity = 100);
+					top: -20px;
+			}
+			
+		}
+	}
+}
+
+article.opened {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 720px;
+	height: 500px;
+	background:#ff3;
+	margin-left: -360px;
+//	hide for now
+	display: none;
+}
+
+article h1 {
+	@include HelveticaNeueLight;
+}
+
+footer {
+	position:fixed;
+	z-index:500;
+	left:0;
+	width:100%;
+	bottom:0;
+	min-height:40px;
+	background:#fff;
+	
+	ul {
+		@include FancyScript(15px);
+		width: 720px;
+		margin: 0 auto;
+		
+		li {
+			float: left;
+			line-height: 40px;
+			margin-right: 20px;
+			
+			&.social {
+				float: right;
+				margin-left: 20px;
+				margin-right: 0;
+			}
+			
+			a {
+				@include FancyScript(15px);
+			}
+		}
+	}
 }
